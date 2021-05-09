@@ -13,7 +13,7 @@ class CreateTableAccesscounts extends Migration
      */
     public function up()
     {
-        Schema::create('table_accesscounts', function (Blueprint $table) {
+        Schema::create('accesscounts', function (Blueprint $table) {
             $table->increments('id');
             $table->string('email');
             $table->integer('numberofaccess');
@@ -29,6 +29,6 @@ class CreateTableAccesscounts extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('table_accesscounts');
+        Schema::dropIfExists('accesscounts');
     }
 }

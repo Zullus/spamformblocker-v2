@@ -13,7 +13,7 @@ class CreateBadmailsTable extends Migration
      */
     public function up()
     {
-        Schema::create('table_bademails', function (Blueprint $table) {
+        Schema::create('bademails', function (Blueprint $table) {
             $table->increments('id');
             $table->string('email')->unique();
             $table->integer('ativo')->default(1);
@@ -30,7 +30,7 @@ class CreateBadmailsTable extends Migration
      */
     public function down()
     {
-        Schema::drop('table_bademails');
+        Schema::drop('bademails');
     }
 }
 

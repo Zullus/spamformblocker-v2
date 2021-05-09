@@ -13,7 +13,7 @@ class CreateTableAccesslog extends Migration
      */
     public function up()
     {
-        Schema::create('table_accesslogs', function (Blueprint $table) {
+        Schema::create('accesslogs', function (Blueprint $table) {
             $table->increments('id');
             $table->string('ip');
             $table->string('reverseip');
@@ -32,6 +32,6 @@ class CreateTableAccesslog extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('table_accesslog');
+        Schema::dropIfExists('accesslogs');
     }
 }
